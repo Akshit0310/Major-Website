@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #4776e6, #8e54e9);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .result-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .result-card h2 {
+      font-size: 26px;
+      margin: 20px 0;
+    }
+
+    .benign {
+      color: #00ffb7;
+    }
+
+    .anomaly {
+      color: #ff6b81;
+    }
+
+    .bar-container {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .bar {
+      height: 20px;
+      line-height: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .benign-bar {
+      background-color: #00ffb7;
+      width: {{ benign }}%;
+    }
+
+    .anomaly-bar {
+      background-color: #ff6b81;
+      width: {{ anomaly }}%;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-card">
+    <h2 class="benign">✅ Benign Traffic: {{ benign }}%</h2>
+    <div class="bar-container">
+      <div class="bar benign-bar">{{ benign }}%</div>
+    </div>
+
+    <h2 class="anomaly">⚠️ Anomalous Traffic: {{ anomaly }}%</h2>
+    <div class="bar-container">
+      <div class="bar anomaly-bar">{{ anomaly }}%</div>
+    </div>
+  </div>
+</body>
+</html>

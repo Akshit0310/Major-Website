@@ -32,7 +32,7 @@ Welcome to the **Anomaly Detection Web App**! This website lets you **upload a C
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/anomaly-lstm-app.git
+git clone [https://github.com/yourusername/anomaly-lstm-app.git](https://github.com/Akshit0310/Major-Website.git)
 cd anomaly-lstm-app
 
 2. Install Python Dependencies
